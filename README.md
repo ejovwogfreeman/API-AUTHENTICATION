@@ -1,23 +1,27 @@
 # DJANGO AUTHENTICATION API.
+
 This project is done with the aim of learning about **Django REST framework** and also building an **AUTHENTICATION API**.
 
 ## Programming Language Used:
-* Python Programming Language
+
+- Python Programming Language
 
 ## Technologies Used:
+
 All of the following are technologies used in this project:
 
-| Backend | Django |
-| -------- | ----------- |
-| Api | Django REST framework |
-| -------- | ----------- |
-| Project Management and Version Control | Github |
-| -------- | ----------- |
-| Database | sqlite |
-| -------- | ----------- |
-| Test of Endpoints | Postman |
+| Backend                                | Django                |
+| -------------------------------------- | --------------------- |
+| Api                                    | Django REST framework |
+| --------                               | -----------           |
+| Project Management and Version Control | Github                |
+| --------                               | -----------           |
+| Database                               | sqlite                |
+| --------                               | -----------           |
+| Test of Endpoints                      | Postman               |
 
 ## Features
+
 [__Register__]- Anyone can register by filling up thr registeration form by giving their details like email, firstname, lastname, password and username.
 
 [__Login__] - Only Registered users can login using just their username and password.
@@ -30,159 +34,177 @@ All of the following are technologies used in this project:
 
 [__ChangePassword__] - registered user can change the password by giving the old password and giving a new password and also the account token.
 
-
 ## EndPoints Test
-* Application used for testing the endpoints - *POSTMAN*
+
+- Application used for testing the endpoints - _POSTMAN_
 
 [__REGISTER ENDPOINT__]
 
-USER REGISTERATION TEST. 
+USER REGISTERATION TEST.
 | Request | POST |
 | -------- | ----------- |
-| Url | POST  http://127.0.0.1:8000/api/register/ |
+| Url | POST http://127.0.0.1:8000/api/register/ |
 | -------- | ----------- |
-| Select body, and then click on form-data | fill in these keys  : username, password, email, first_name and last_name *fill in your values for the keys and send* |
+| Select body, and then click on form-data | fill in these keys : username, password, email, first_name and last_name _fill in your values for the keys and send_ |
 | -------- | ----------- |
 | status | 200_OK - Registeration was successful.|
 | -------- | ----------- |
 | status | 400 Bad Request - Error in registeration |
 
-
-
 [__LOGIN ENDPOINT__]
 
 LOGIN REGISTERATION TEST.
 
-| Request | POST |
-| -------- | ----------- |
-| Url | POST  http://127.0.0.1:8000/api/login/ |
-| -------- | ----------- |
-| Select body, and then click on form-data | fill in these keys  : username and password *fill in your values for the keys and send* |
-| -------- | ----------- |
-| status | 200_OK - Login was successful.|
-| -------- | ----------- |
-| status | 400 Bad Request - Error in login |
-
+| Request                                  | POST                                                                                   |
+| ---------------------------------------- | -------------------------------------------------------------------------------------- |
+| Url                                      | POST http://127.0.0.1:8000/api/login/                                                  |
+| --------                                 | -----------                                                                            |
+| Select body, and then click on form-data | fill in these keys : username and password _fill in your values for the keys and send_ |
+| --------                                 | -----------                                                                            |
+| status                                   | 200_OK - Login was successful.                                                         |
+| --------                                 | -----------                                                                            |
+| status                                   | 400 Bad Request - Error in login                                                       |
 
 [__USERDETAIL ENDPOINT__]
 
 USERDETAILS ENDPOINT TEST.
 
-| Request | GET |
-| -------- | ----------- |
-| Url | GET  http://127.0.0.1:8000/api/user/ |
-| -------- | ----------- |
-| Select headers | fill in your token  : in these format *Token <input token here>* |
-| -------- | ----------- |
-| status | 200_OK - Userdetail was successful.|
-| -------- | ----------- |
-| status | 400 Bad Request - Error in Userdetail |
-
+| Request        | GET                                                             |
+| -------------- | --------------------------------------------------------------- |
+| Url            | GET http://127.0.0.1:8000/api/user/                             |
+| --------       | -----------                                                     |
+| Select headers | fill in your token : in these format _Token <input token here>_ |
+| --------       | -----------                                                     |
+| status         | 200_OK - Userdetail was successful.                             |
+| --------       | -----------                                                     |
+| status         | 400 Bad Request - Error in Userdetail                           |
 
 [__CHANGE PASSWORD ENDPOINT__]
 
 CHANGE PASSWORD ENDPOINT TEST.
 
-| Request | PUT |
-| -------- | ----------- |
-| Url | PUT  http://127.0.0.1:8000/api/change-password/ |
-| -------- | ----------- |
-| Select headers | create this key  : Authorization | fill in your token  : in these format *Token <input token here>* |
-| -------- | ----------- |
-| Select body, and then click on x-www-form-urlencoded | create in these keys  : old_password, new-password *fill in your values for the keys and send* |
-| -------- | ----------- |
-| status | 200_OK - Password Updated successfully.|
-| -------- | ----------- |
-| status | 401 Unauthorized, 400 Bad request |
-
-
+| Request                                              | PUT                                                                                           |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| Url                                                  | PUT http://127.0.0.1:8000/api/change-password/                                                |
+| --------                                             | -----------                                                                                   |
+| Select headers                                       | create this key : Authorization                                                               | fill in your token : in these format _Token <input token here>_ |
+| --------                                             | -----------                                                                                   |
+| Select body, and then click on x-www-form-urlencoded | create in these keys : old_password, new-password _fill in your values for the keys and send_ |
+| --------                                             | -----------                                                                                   |
+| status                                               | 200_OK - Password Updated successfully.                                                       |
+| --------                                             | -----------                                                                                   |
+| status                                               | 401 Unauthorized, 400 Bad request                                                             |
 
 [__RESET PASSWORD ENDPOINT__]
 
 REST-PASSWORD ENDPOINT TEST.
 
-| Request | POST |
-| -------- | ----------- |
-| Url | POST  http://127.0.0.1:8000/api/change-password/ |
-| -------- | ----------- |
-| Select body, and then click on x-www-form-urlencoded | create in these keys  : token, password and email *fill in your values for the keys and send* |
-| -------- | ----------- |
-| status | 200_OK - Password reset Updated successful.|
-| -------- | ----------- |
-| status |400 Bad request |
-
+| Request                                              | POST                                                                                         |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Url                                                  | POST http://127.0.0.1:8000/api/change-password/                                              |
+| --------                                             | -----------                                                                                  |
+| Select body, and then click on x-www-form-urlencoded | create in these keys : token, password and email _fill in your values for the keys and send_ |
+| --------                                             | -----------                                                                                  |
+| status                                               | 200_OK - Password reset Updated successful.                                                  |
+| --------                                             | -----------                                                                                  |
+| status                                               | 400 Bad request                                                                              |
 
 [__LOGOUT ENDPOINT__]
 
 LOGOUT ENDPOINT TEST.
 
-| Request | POST |
-| -------- | ----------- |
-| Url | POST  http://127.0.0.1:8000/api/logout/ |
-| -------- | ----------- |
-| Select headers | create this key  : Authorization | fill in your token  : in these format *Token <input token here>* |
-| -------- | ----------- |
-| status | 204 No content - Logout successful.|
-| -------- | ----------- |
-| status | 401 Unauthorized (invalid token), 400 Bad request |
-
+| Request        | POST                                              |
+| -------------- | ------------------------------------------------- | --------------------------------------------------------------- |
+| Url            | POST http://127.0.0.1:8000/api/logout/            |
+| --------       | -----------                                       |
+| Select headers | create this key : Authorization                   | fill in your token : in these format _Token <input token here>_ |
+| --------       | -----------                                       |
+| status         | 204 No content - Logout successful.               |
+| --------       | -----------                                       |
+| status         | 401 Unauthorized (invalid token), 400 Bad request |
 
 ## Project Status
-Project is : *in progress*
 
-## Collaboration 
+Project is : _in progress_
+
+## Collaboration
+
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated** 🤝
 
 ## Dependencies
-* asgiref==3.6.0
-* cffi==1.15.1
-* cryptography==40.0.1
-* Django==4.1.7
-* django-rest-knox==4.2.0
-* django-rest-passwordreset==1.3.0
-* djangorestframework==3.14.0     
-* pycparser==2.21
-* pytz==2023.2
-* sqlparse==0.4.3
-* tzdata==2023.2
+
+- asgiref==3.6.0
+- cffi==1.15.1
+- cryptography==40.0.1
+- Django==4.1.7
+- django-rest-knox==4.2.0
+- django-rest-passwordreset==1.3.0
+- djangorestframework==3.14.0
+- pycparser==2.21
+- pytz==2023.2
+- sqlparse==0.4.3
+- tzdata==2023.2
+
 ### Getting Started
+
 Setting up project locally is a pretty easy step.
 
 1. Clone the repo
-  ```sh
-  git clone https://github.com/Kis123mas/API-AUTHENTICATION.git
-  ```
+
+```sh
+git clone https://github.com/ejovwogfreeman/API-AUTHENTICATION.git
+```
+
 2. Move into the project directory
-  ```
-  cd authentication
-  ```
+
+```
+cd authentication
+```
+
 3. Create a virtual environment
-  ```
-  python -m virtualenv venv 
-  ```
+
+```
+python -m virtualenv venv
+```
+
 4. Activate the virtual environment
-  ```
-  venv\Scripts\activate
-  ```
+
+```
+venv\Scripts\activate
+```
+
 6. Install pip dependencies
-  ```
-  pip install -r requirements.txt
-  ```
+
+```
+pip install -r requirements.txt
+```
+
 8. Make Migrations
-  ```
-  py manage.py makemigrations
-  ```
+
+```
+py manage.py makemigrations
+```
+
 9. Migrate to Database
-  ```
-  py manage.py migrate
-  ```
+
+```
+py manage.py migrate
+```
+
 10. Create a superuser
-   ```
-   py manage.py createsuperuser
-   ```
+
+```
+py manage.py createsuperuser
+```
+
 11. Run Server
-   ```
-   py manage.py runserver
-   ```
+
+```
+py manage.py runserver
+```
 
 <br/>
+
+AUTHOR: Ejovwo Godbless
+
+Github Link https://github.com/ejovwogfreeman/API-AUTHENTICATION.git
